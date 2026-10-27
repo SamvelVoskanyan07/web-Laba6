@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 5 (на базе ЛР 4)</title>
+    <!-- Подключение Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Собственные стили для болотной темы -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
 
+    <!-- Шапка с классами Bootstrap -->
+    <header id="top-header" class="py-3 shadow-sm">
+        <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3 text-center text-sm-start">
+            <img src="image.png" alt="Логотип студенческого портала" width="80" height="80" class="img-fluid rounded">
+            <nav>
+                <ul class="nav flex-column flex-sm-row gap-2 justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold p-1" href="#links-block">Ссылки</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold p-1" href="#table-block">Таблица</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold p-1" href="#form-block">Форма</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold p-1" href="#calc-block">Калькулятор</a></li>
+                </ul>
+            </nav>
+            <p class="site-title m-0 fw-bold fs-5">Студенческий портал</p>
+        </div>
+    </header>
+
+    <main class="container my-4 p-4 bg-white rounded shadow-sm">
+        <h1 class="mb-4 text-center text-sm-start">Лабораторная работа 5</h1>
+
+        <!-- Сетка Bootstrap с Mobile First переносом и порядком блоков -->
+        <div class="row g-4"><!-- Блок ссылок: Mobile First (по умолчанию order-2, на больших экранах lg: order-1) -->
+            <section id="links-block" class="col-12 col-lg-4 order-2 order-lg-1">
+                <h2 class="h3 mb-3">Список гиперссылок</h2>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="https://kubsu.ru/index.php" class="text-decoration-none">Перейти на сайт КубГУ по http</a></li>
+                    <li><a href="https://kubsu.ru/index.php" class="text-decoration-none">Перейти на сайт КубГУ по https</a></li>
+                </ul>
+
+                <div class="my-2">
+                    Картинка:
+                    <div class="my-2">
+                        <img src="image.jpg" alt="Цветок" width="200" height="150" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="about/" class="text-decoration-none">Сокращенная ссылка на каталог</a></li>
+                    <li><a href="https://www.kubsu.ru/index.php" class="text-decoration-none">На главную страницу</a></li>
+                    <li><div id="Front">Фрагмент страницы, на который ведёт якорь</div></li>
+                    <li><a href="#Front" class="text-decoration-none">Перейти к фрагменту этой страницы</a></li>
+                    <li><a href="https://www.google.com/search?q=%D0%9A%D1%83%D0%B1%D0%93%D0%A3&num=10" class="text-decoration-none">Ссылка с тремя параметрами в URL</a></li>
+                    <li><a href="test1.html" class="text-decoration-none">Ссылка с параметром id</a></li>
+                    <li><a href="about/test2.html" class="text-decoration-none">Относительная ссылка в подкаталоге</a></li>
+                    <li><a href="../div.html" class="text-decoration-none">Относительная ссылка уровнем выше</a></li>
+                    <li><a href="../../test4.html" class="text-decoration-none">Относительная ссылка двумя уровнями выше</a></li>
+                </ul>
+
+                <p class="mt-3">Подробнее о поступлении можно узнать на <a href="https://kubsu.ru/ru/abiturient/contacts" class="text-decoration-none">странице для абитуриентов</a> сайта университета.</p>
+                <p><a href="https://ru.wikipedia.org/wiki/HTML#История" class="text-decoration-none">Ссылка на фрагмент стороннего сайта</a></p>
+
+                <div class="my-2">
+                    Карта ссылок на изображении:
+                    <div class="my-2">
+                        <img src="test5.svg" alt="Карта ссылок" width="300" height="150" usemap="#imgmap" class="img-fluid">
+                        <map name="imgmap">
+                            <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/ru/abiturient" alt="Абитуриентам" title="Абитуриентам">
+                            <area shape="circle" coords="225,75,70" href="https://kubsu.ru/contacts" alt="Контакты" title="Контакты">
+                        </map>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="" class="text-decoration-none">Ссылка с пустым href</a></li>
+                    <li><a href="/" rel="nofollow" class="text-decoration-none">Ссылка с запретом на переход</a></li>
+                </ul>
+
+                <ol class="mt-2">
+                    <li><a href="https://kubsu.ru/" title="Главная страница университета" class="text-decoration-none">КубГУ</a></li>
+                    <li><a href="https://kubsu.ru/ru/abiturient" title="Абитуриентам" class="text-decoration-none">Абитуриентам</a></li>
+                    <li><a href="https://kubsu.ru/contacts" title="Контактная информация" class="text-decoration-none">Контакты</a></li>
+                </ol>
+
+                <ul class="list-unstyled">
+                    <li><a href="ftp://ftp.kubsu.ru/docs/lecture1.pdf" class="text-decoration-none">Ссылка на файл по FTP</a></li>
+                </ul>
+            </section><!-- Правая колонка: Таблица, Форма, Калькулятор (order-1 на мобилках, order-2 на lg) -->
+            <div class="col-12 col-lg-8 order-1 order-lg-2 d-flex flex-column gap-5">
+
+                <!-- Блок таблицы: Mobile First (по умолчанию order-1, на lg: order-2) -->
+                <section id="table-block" class="order-1 order-lg-2">
+                    <h2 class="h3 mb-3">Таблица</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Колонка 1</th>
+                                    <th>Колонка 2</th>
+                                    <th>Колонка 3</th>
+                                    <th>Колонка 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">Ячейка 11, объединенная с 12, 13 и 14</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Ячейка 21, объединенная с 31</td>
+                                    <td>Ячейка 22</td>
+                                    <td>Ячейка 23</td>
+                                    <td>Ячейка 24</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячейка 32</td>
+                                    <td>Ячейка 33</td>
+                                    <td>Ячейка 34</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячейка 41</td>
+                                    <td colspan="2">Ячейка 42, объединенная с 43</td>
+                                    <td>Ячейка 44</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячейка 51</td>
+                                    <td>Ячейка 52</td>
+                                    <td>Ячейка 53</td>
+                                    <td>Ячейка 54</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячейка 61</td>
+                                    <td>Ячейка 62</td>
+                                    <td>Ячейка 63</td>
+                                    <td>Ячейка 64</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Блок формы -->
+                <section id="form-block" class="order-2 order-lg-1">
+                    <h2 class="h3 mb-3">Анкета студента</h2>
+                    <p class="text-muted">Поля, отмеченные <span class="text-danger fw-bold">*</span>, обязательны для заполнения.</p>
+
+                    <form action="/" method="POST" class="d-flex flex-column gap-3 max-w-600">
+                        <div>
+                            <label class="form-label fw-bold">Ваше ФИО: <span class="text-danger">*</span></label>
+                            <input type="text" name="fio" class="form-control" required placeholder="Иванов Иван Иванович">
+                        </div>
+
+                        <div>
+                            <label class="form-label fw-bold">Номер телефона: <span class="text-danger">*</span></label>
+                            <input type="tel" name="phone" class="form-control" required placeholder="+7 (999)-000-00-00">
+                        </div>
+
+                        <div>
+                            <label class="form-label fw-bold">E-mail: <span class="text-danger">*</span></label>
+                            <input type="email" name="email" class="form-control" required placeholder="example@kubsu.ru">
+                        </div>
+
+                        <div>
+                            <label class="form-label fw-bold">Дата рождения:</label><input type="date" name="birthdate" class="form-control">
+                        </div>
+
+                        <fieldset class="border p-3 rounded">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold">Пол:</legend>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="gender-m" value="male" class="form-check-input" checked>
+                                <label class="form-check-label" for="gender-m">Мужской</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="gender-f" value="female" class="form-check-input">
+                                <label class="form-check-label" for="gender-f">Женский</label>
+                            </div>
+                        </fieldset>
+
+                        <div>
+                            <label class="form-label fw-bold">Любимый язык программирования:</label>
+                            <select name="prog_language" class="form-select">
+                                <option value="cpp">C++</option>
+                                <option value="java">Java</option>
+                                <option value="python">Python</option>
+                                <option value="js">JavaScript</option>
+                            </select>
+                        </div>
+
+                        <fieldset class="border p-3 rounded">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold">Владение технологиями:</legend>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input type="checkbox" name="tech[]" value="html" id="t-html" class="form-check-input">
+                                    <label class="form-check-label" for="t-html">HTML</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="tech[]" value="css" id="t-css" class="form-check-input">
+                                    <label class="form-check-label" for="t-css">CSS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="tech[]" value="js" id="t-js" class="form-check-input">
+                                    <label class="form-check-label" for="t-js">JavaScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="tech[]" value="cpp" id="t-cpp" class="form-check-input">
+                                    <label class="form-check-label" for="t-cpp">C++</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div>
+                            <label class="form-label fw-bold">Краткая биография:</label>
+                            <textarea name="bio" rows="4" class="form-control" placeholder="Пара слов о себе..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" name="contract" value="yes" id="contract" class="form-check-input" required>
+                            <label class="form-check-label" for="contract">С контрактом ознакомлен(а): Согласен с условиями <span class="text-danger">*</span></label>
+                        </div>
+
+                        <button type="submit" class="btn custom-btn text-white align-self-start px-4">Отправить</button>
+                    </form>
+               <!-- Блок калькулятора (Лабораторная работа №6) -->
+                <section id="calc-block" class="order-3">
+                    <h2 class="h3 mb-3">Калькулятор стоимости услуги</h2>
+                    <div class="card p-4 shadow-sm border">
+                        
+                        <!-- 1. Выбор типа товара (радиокнопки, 3 варианта) -->
+                        <fieldset class="mb-3 border p-3 rounded">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold">Тип товара/услуги:</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productType" id="type1" value="1000" checked>
+                                <label class="form-check-label" for="type1">Тип 1 (базовый — 1000 руб., без опций и свойств)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productType" id="type2" value="2000">
+                                <label class="form-check-label" for="type2">Тип 2 (с опциями — 2000 руб.)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="productType" id="type3" value="3000">
+                                <label class="form-check-label" for="type3">Тип 3 (со свойствами — 3000 руб.)</label>
+                            </div>
+                        </fieldset>
+
+                        <!-- 2. Опции товара (селект) — отображается только для Типа 2 -->
+                        <div class="mb-3 d-none" id="options-container">
+                            <label for="product-select" class="form-label fw-bold">Опция товара:</label>
+                            <select id="product-select" class="form-select">
+                                <option value="200">Опция А (+200 руб.)</option>
+                                <option value="500">Опция Б (+500 руб.)</option>
+                                <option value="900">Опция В (+900 руб.)</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Свойство товара (чекбокс) — отображается только для Типа 3 -->
+                        <div class="mb-3 d-none" id="property-container">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="product-property" value="700">
+                                <label class="form-check-label fw-bold" for="product-property">Дополнительное свойство (+700 руб.)</label>
+                            </div>
+                        </div>
+
+                        <!-- 4. Количество товара -->
+                        <div class="mb-3">
+                            <label for="product-quantity" class="form-label fw-bold">Количество товара:</label>
+                            <input type="text" id="product-quantity" class="form-control" value="1" placeholder="Введите количество (только цифры)">
+                            <div id="calc-error" class="text-danger mt-1" style="display: none; font-size: 0.875rem;"></div>
+                        </div>
+
+                        <!-- Итоговая стоимость (динамическая) -->
+                        <div class="mt-3 fs-5 fw-bold" id="calc-result">Стоимость заказа: 1000 руб.</div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="py-3 text-center text-white">
+        <div class="container">
+            <p class="m-0">&copy; Студенческий портал, 2026</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JS-скрипта калькулятора в нижней части страницы с defer -->
+    <script src="script.js" defer></script>
+</body>
+</html>
